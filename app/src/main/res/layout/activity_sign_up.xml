@@ -27,7 +27,8 @@
         android:id="@+id/button3"
         android:layout_alignParentLeft="false"
         android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="false" />
+        android:layout_alignParentRight="false"
+        android:onClick="clickSingUpSing" />
 
     <LinearLayout
         android:orientation="vertical"
