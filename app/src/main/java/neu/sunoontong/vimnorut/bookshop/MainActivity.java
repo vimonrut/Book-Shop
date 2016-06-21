@@ -48,6 +48,7 @@ public class MainActivity extends AppCompatActivity {
         private String urlString;
         private boolean statusABoolean = true;
         private String truePasswordString;
+        private String nameLoginString;
 
         public MySynchronize(Context context, String urlString) {
             this.context = context;
@@ -91,8 +92,8 @@ public class MainActivity extends AppCompatActivity {
 
                     if (userString.equals(jsonObject.getString("User"))) {
                         statusABoolean = false;
-                        truePasswordString = jsonObject.getString("password");
-
+                        truePasswordString = jsonObject.getString("Password");
+                        nameLoginString = jsonObject.getString("Name");
 
 
                     }  //if
@@ -106,6 +107,12 @@ public class MainActivity extends AppCompatActivity {
 
                 } else if (passwordString.equals(truePasswordString)) {
                     //password True
+
+                    Intent intent = new Intent(context, BookActivity.class);
+                    intent.putExtra("Name", nameLoginString);
+                    startActivity(intent);
+
+
                     Toast.makeText(context, "welcome User", Toast.LENGTH_SHORT).show();
                 } else {
                     //Password False
