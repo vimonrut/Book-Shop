@@ -7,18 +7,15 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="neu.sunoontong.vimnorut.bookshop.MainActivity">
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!" />
+    tools:context="neu.sunoontong.vimnorut.bookshop.MainActivity"
+    android:background="@drawable/wall7">
 
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true">
+        android:layout_alignParentBottom="true"
+        android:background="#e0fcc2">
 
         <Button
             android:layout_width="wrap_content"
@@ -34,5 +31,49 @@
             android:id="@+id/button2"
             android:layout_weight="1"
             android:onClick="clickSingUpMain" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:padding="20dp"
+        android:gravity="center"
+        android:background="#78d5f5d0">
+
+        <ImageView
+            android:layout_width="@dimen/icon_width"
+            android:layout_height="@dimen/icon_hight"
+            android:id="@+id/imageView"
+            android:src="@drawable/logo_neu" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/app_name"
+            android:id="@+id/textView5"
+            android:textSize="@dimen/h1"
+            android:textStyle="bold"
+            android:layout_marginTop="20dp"
+            android:textColor="#049c7b" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/editText4"
+            android:hint="User :"
+            android:inputType="text"
+            android:textColor="#049c7b"
+            android:textColorHint="#259062" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/editText5"
+            android:hint="Password :"
+            android:inputType="textPassword"
+            android:textColor="#049c7b"
+            android:textColorHint="#259062" />
     </LinearLayout>
 </RelativeLayout>
